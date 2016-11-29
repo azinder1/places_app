@@ -1,0 +1,19 @@
+<div class="col-md-4 col-md-offset-1">
+  <h1>Places I've Been</h1>
+  <p>Here are all the places I've been</p>
+  <ul>
+    <% @places.each do |place| %>
+    <li><%= place.place_name %></li>
+    <% end %>
+  </ul>
+
+  <p>Add a new place:</p>
+  <form  action="/places" method="post">
+    <div class="formgroup">
+        <label for="new_place">Add a place here</label>
+        <input class="form-control" type="text" name="new_place" id="new_place">
+        <br>
+        <button class="btn btn-default" type="submit">Add!</button>
+    </div>
+  </form>
+</div>
